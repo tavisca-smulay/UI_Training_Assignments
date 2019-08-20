@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyNavigationBar</title>
+	<style type="text/css">
+
+		.list-item:hover{
+			background-color: #484848;
+			border: 1px solid black;
+		}
+
+		.list-item{
+			color: #fff;
+			font-size: 20px;
+			text-align: center;
+			display: inline-block;
+			padding: 8px 20px 8px;
+			font-family: Comic Sans MS;
+		}
+
+		.list{
+			list-style-type: none;
+			background-color: #000;
+		}
+
+		#nav-image{
+			padding: 10px;
+			border: 3px solid black;
+			align-self: center;
+		}
+
+		.down {
+  			transform: rotate(45deg);
+  			-webkit-transform: rotate(45deg);
+  			border: solid black;
+  			border-width: 0 3px 3px 0;
+  			display: inline-block;
+  			padding: 3px;
+  		}
+
+  		.menu-items{
+  			display: none;
+  			font-size: 16px; 
+  			color: pink;
+  			padding: 14px 16px;
+			text-align: center;
+			font-family: Comic Sans MS;
+  		}
+
+  		.drop_sub:hover .menu-items
+  		{
+          display:block;
+  		}
+
+	</style>
+</head>
+<body>
+	<ul class="list">
+		<li class="list-item" id="nav-image"><image src="navIcon.png"/></li>
+		<li class="list-item">NavItem1</li>
+		<li class="list-item">NavItem2</li>
+		<li class="list-item">NavItem3</li>
+		<li class="list-item">NavItem4</li>
+		<li>
+		<div class = "drop_sub">
+		<div>Dropdown <i class="down"></i>
+			<div class="menu-items">Menu1</div>
+    	  	<div class="menu-items">Menu2</div>
+    	  	<div class="menu-items">Menu3</div>
+    	</div>
+    </div>
+</li>
+	</ul>
+</body>
+</html>
