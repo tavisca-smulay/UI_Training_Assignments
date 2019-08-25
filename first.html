@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function baseFunction(){
+				var btn = document.querySelector("#btn");
+
+				if(btn !== null)
+					btn.addEventListener("click",showInput);
+		}
+
+		function showInput(){
+			var elem = document.querySelector("#firstName");
+			if(elem !== null){
+				var firstName = elem.value;
+				alert(firstName);
+			}
+			elem.style.color = "#ff0344";
+			elem.value = "I have changed the text";
+			document.getElementById("displayText").innerText = firstName;
+			createAndRenderElement();
+		}
+
+		window.addEventListener("load", baseFunction);
+
+		function createAndRenderElement(){
+			var div = document.createElement("div");
+			div.innerText = "I have created div dynamically";
+			div.setAttribute("class", "content");
+			alert(div.getAttribute("class"));
+			document.getElementById("displayText").append(div);
+		}
+
+	</script>
+	<style type="text/css">
+		.content{
+			border: 5px groove #00a22f;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="firstName"/>
+	<input type="button" id="btn" value="show alert" onclick = "showInput">
+	<div id="displayText"></div>
+</body>
+</html>
